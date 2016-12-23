@@ -11,10 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', 'HomeController@index');
+// Auth::routes();
+
+Route::group(['prefix' => 'superadmin'], function() {
+    Route::get('/', 'SuperAdminController@index');
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
+Route::group(['prefix' => 'admin'], function() {
+    Route::get('/', 'AdminController@index');
+});
+Route::group(['prefix' => 'courtier'], function() {
+    Route::get('/', 'CourtierController@index');
+});

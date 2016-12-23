@@ -1,1 +1,44 @@
 @import 'lib/pykto/'
+Normalize()
+
+a
+    text-decoration: none
+li
+    list-style-type: none
+
+.container
+    width: 100%
+    max-width: 1200px
+    margin: auto
+    DisplayFlex()
+
+#navbar
+    font-size: 0.8em
+    background: #f9f9f9
+    color: black
+    overflow: hidden
+    .container
+        justify-content: space-between
+        .navbar-header,
+        .navbar-nav
+            DisplayFlex()
+        .navbar-nav
+            ul
+                DisplayFlex()
+                margin: 0
+                padding: 0
+                li
+                    a
+                        display: block
+                        height: 50px;
+                        line-height: 50px;
+                        padding: 0 5px
+        .navbar-header
+            a
+                DisplayFlex()
+                max-width: 400px    
+            .navbar-hamb
+                display: none
+        .navigation
+            flex-grow: 2
+
