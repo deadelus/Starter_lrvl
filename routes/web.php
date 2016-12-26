@@ -22,4 +22,6 @@ Route::group(['prefix' => 'admin'], function() {
 });
 Route::group(['prefix' => 'courtier'], function() {
     Route::get('/', 'CourtierController@index');
+    Route::get('/deposer-un-dossier', 'DossierController@form');
+    Route::post('/deposer-un-dossier', 'DossierController@upload');
 });
